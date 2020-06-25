@@ -8,4 +8,4 @@ iDStadium app adalah aplikasi daftar Satdion sepakbola di indonesia, app ini dib
 - iOS 13
 
 ## tampilan aplikasi
-![Alt text](./iDStadium1.gif?raw=true "iDStadium")
+![](iDStadium1.gif)
