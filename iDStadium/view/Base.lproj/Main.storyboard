@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0x4-iD-5d9">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stadium Indonesia-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="iDStadiumViewController" customModule="iDStadium" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FHe-hw-8BH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tOW-CO-8gI">
+                                <rect key="frame" x="8" y="46" width="398" height="687"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="yCg-Fa-sKs"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="CYV-42-cZF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tOW-CO-8gI" firstAttribute="leading" secondItem="4YX-Qe-gIp" secondAttribute="leading" constant="8" id="118-G0-lrn"/>
+                            <constraint firstItem="4YX-Qe-gIp" firstAttribute="trailing" secondItem="tOW-CO-8gI" secondAttribute="trailing" constant="8" id="Jgf-Dx-czG"/>
+                            <constraint firstItem="tOW-CO-8gI" firstAttribute="top" secondItem="4YX-Qe-gIp" secondAttribute="top" constant="2" id="MlK-55-HjR"/>
+                            <constraint firstItem="4YX-Qe-gIp" firstAttribute="bottom" secondItem="tOW-CO-8gI" secondAttribute="bottom" constant="3" id="vwQ-4f-jXC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4YX-Qe-gIp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Stadium Indonesia" id="RfR-fV-yAQ"/>
+                    <connections>
+                        <outlet property="tableView" destination="tOW-CO-8gI" id="8Zv-qf-Jru"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="549.27536231884062" y="-62.771739130434788"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kDu-cB-7nw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0x4-iD-5d9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RMa-vg-XK3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8Q9-Ao-hB6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GJx-gk-sWH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-357.97101449275362" y="-62.771739130434788"/>
+        </scene>
+    </scenes>
+</document>
