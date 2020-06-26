@@ -17,17 +17,15 @@ class iDStadiumViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         navigationController?.navigationBar.prefersLargeTitles = true
-        
         setupNavItem()
         let cellNib = UINib(nibName:IdentifierCell.tableListCell, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: IdentifierCell.tableListCell)
     }
     
     @objc func buttonProfileAction(){
-        let pindah = UINavigationController(rootViewController: ProfileViewController())
-       present(pindah,animated: true,completion: nil)
+        let moveTo = UINavigationController(rootViewController: ProfileViewController())
+       present(moveTo,animated: true,completion: nil)
     }
     
     private func setupNavItem(){
@@ -56,10 +54,17 @@ extension iDStadiumViewController: UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(_ tableview:UITableView, didSelectRowAt indexPath: IndexPath){
+        tableview.deselectRow(at: indexPath, animated: true)
         let detailStadium = DetailiDStadiumViewController(nibName: "DetailiDStadiumViewController", bundle: nil)
-        
         detailStadium.stadium = stadiumData[indexPath.row]
-        
         self.navigationController?.pushViewController(detailStadium, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if stadiumData.count == 0 {
+            return nil
+        } else {
+            return indexPath
+        }
     }
 }
